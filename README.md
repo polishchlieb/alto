@@ -10,4 +10,6 @@ Bot works on v3.7.2 (you should add Python to your PATH)
 `pip install -U git+https://github.com/Rapptz/discord.py@rewrite`
 
 ## Running the bot
-`python bot.py` in the main directory
+- add your token to `bot.py` file
+- `python bot.py` in the main directory
+- add your openweatherapi's app id to `commands/weatherCommand.py` file
