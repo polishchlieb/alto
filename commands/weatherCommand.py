@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 
 @bot.command(pass_context=True)
 async def weather(ctx, country):
-    appid = '121a5f2255696f766cba3aeb00c73fad'
+    appid = 'your app id'
 
     url = f'http://api.openweathermap.org/data/2.5/weather?APPID={appid}&units=metric&q='
     response = get(url + urlparse(country).geturl()).json()
