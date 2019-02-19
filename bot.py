@@ -3,7 +3,7 @@ import builtins
 
 bot = Bot(command_prefix = '?')
 builtins.bot = bot
-token = 'NTQ2NzY5NTE5MjM1MDM5MjMy.D0tkHA.5tRv7uUuusRQpdzed3fqYWRbGZM'
+token = 'your token'
 
 import commands.randomCommand
 import commands.pingCommand
