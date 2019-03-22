@@ -1,6 +1,3 @@
-from builtins import bot
-
-@bot.event
-async def on_ready():
+async def on_ready(self):
     print('Bot is ready')
-    print(f'Running on {len(bot.guilds)} servers')
+    print(f'Running on {len(self.bot.guilds)} servers')

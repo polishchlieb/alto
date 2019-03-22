@@ -1,6 +1,5 @@
-from discord.ext import commands
-from builtins import bot
+from discord.ext.commands import command
 
-@bot.command(pass_context=True)
-async def ping(ctx):
-    await ctx.send(f'Pong! The ping is {bot.latency}')
+@command(pass_context=True)
+async def ping(self, ctx):
+    await ctx.send(f'Pong! The ping is {self.bot.latency}')

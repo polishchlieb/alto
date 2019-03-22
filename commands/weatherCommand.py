@@ -1,14 +1,14 @@
 from discord import Embed, Colour
-from builtins import bot
+from discord.ext.commands import command
 from requests import get
 from urllib.parse import urlparse
 
-@bot.command(pass_context=True)
-async def weather(ctx, country):
-    appid = 'your app id'
+appid = 'your app id'
 
+@command(pass_context=True)
+async def weather(self, ctx, *country):
     url = f'http://api.openweathermap.org/data/2.5/weather?APPID={appid}&units=metric&q='
-    response = get(url + urlparse(country).geturl()).json()
+    response = get(url + urlparse(' '.join(country)).geturl()).json()
 
     embed = Embed(
         title = f'Weather in {country}',

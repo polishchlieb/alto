@@ -1,7 +1,6 @@
-from discord.ext import commands
-from builtins import bot
+from discord.ext.commands import command
 from random import randint
 
-@bot.command(pass_context=True)
-async def random(ctx):
+@command(pass_context=True)
+async def random(self, ctx):
     await ctx.send(randint(1, 100))

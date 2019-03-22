@@ -1,19 +1,12 @@
 from discord.ext.commands import Bot
-import builtins
+
+from misc.events import setupEvents
+from misc.commands import setupCommands
 
 bot = Bot(command_prefix = '?')
-builtins.bot = bot
 token = 'your token'
 
-import commands.randomCommand
-import commands.pingCommand
-import commands.weatherCommand
-import commands.giveawayCommand
-
-import events.readyEvent
-import events.messageEvent
-
-from commandErrorHandler import setup
-setup(bot)
+setupEvents(bot)
+setupCommands(bot)
 
 bot.run(token)
